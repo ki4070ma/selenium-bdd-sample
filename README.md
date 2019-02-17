@@ -9,39 +9,36 @@
 * Covered user stories
 
 # Developments
-## How to run
+## How to run tests
 * Via behave(Main)
+   * Will be executed under features folder
 
 ```bash
 $ behave
 ```
 
 * Via pytest(Just for test)
+   * Will be executed test_selenium.py
 
 ```bash
 $ pytest
 ```
 
-## Run flake8
+## Run autopep8
 
 ```bash
-$ flake8 --config=.config-flake8 .
+$ python -m autopep8 -r --global-config .config-pep8 -i .
 ```
 
 ## Dependencies
-* [pip]: selenium, pytest, behave, flake8
+* [pip]: selenium, pytest, behave, autopep8
 
-# Checked items
+# References
 * Test Design Considerations@SeleniumHQ
    * https://www.seleniumhq.org/docs/06_test_design_considerations.jsp 
 * Test Automation Patterns Wiki
    * https://testautomationpatterns.org/wiki/index.php/Main_Page
    * [Japanese translation] just checked overview
       * http://blog.amateur-factory.jp/?eid=1444184
-
-# Appium experiences
-* Created test scenarios on 3rd party Android app
-   * Page Object Pattern
-   * Took evidence screen record, screen short just before action, adb log
-* Tried BDD framework (behave by python)
-   * https://github.com/behave/behave
+* Selenium by python
+   * https://kurozumi.github.io/selenium-python/index.html
