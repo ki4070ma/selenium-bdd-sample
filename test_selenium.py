@@ -3,13 +3,13 @@
 import os
 from selenium import webdriver
 
+from pages.google.search import SearchPage
+
 def test_google():
     driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'))
-    driver.get('http://www.google.com')
-    elm = driver.find_element_by_name('q')
-    elm.clear()
-    elm.send_keys('hogehoge')
-    assert elm.get_attribute('value') == 'hogehoge'
+    search_page = SearchPage(driver)
+    search_page.input_keyword('hogehoge')
+    assert search_page.get_input_keyword() == 'hogehoge'
     import time
     time.sleep(3)
     driver.close()
