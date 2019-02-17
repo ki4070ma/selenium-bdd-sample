@@ -1,5 +1,6 @@
 
 from features.pages.common.basepage import BasePage
+from features.pages.locators import SearchPageLocators
 
 class SearchPage(BasePage):
 
@@ -13,8 +14,8 @@ class SearchPage(BasePage):
         el.send_keys(word)
 
     def get_input_keyword(self):
-        el = self._search_text_box()
-        return el.get_attribute('value')
+        return self._search_text_box().get_attribute('value')
 
     def _search_text_box(self):
-        return self.driver.find_element_by_name('q')
+        print(*SearchPageLocators.SEARCH_TEXT_BOX)
+        return self.driver.find_element(*SearchPageLocators.SEARCH_TEXT_BOX)
