@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import os
+import time
 import unittest
 from selenium import webdriver
 
@@ -9,17 +10,23 @@ from features.pages.google.search import SearchPage
 class GoogleSearchPageTest(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'))
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--incognito")
+        self.driver = webdriver.Chrome(options=chrome_options,
+                                           executable_path=os.environ.get('CHROMEDRIVER_PATH'))
 
     def tearDown(self):
-        import time
-        time.sleep(3)  # Just to check the view on browse by me
+        time.sleep(1)  # Just to check the view on browse by me
         self.driver.close()
 
     def test_scenario1_search_keyword(self):
         search_page = SearchPage(self.driver)
         search_page.input_keyword('hogehoge')
-        assert search_page.get_input_keyword() == 'hogehoge'
+        assert search_page.search_query_word == 'hogehoge'
+
+    def test_static_contents(self):
+        search_page = SearchPage(self.driver)
+        assert self.driver.title == 'Google'  # TODO Didn't use search_page instance
 
 
 if __name__ == "__main__":

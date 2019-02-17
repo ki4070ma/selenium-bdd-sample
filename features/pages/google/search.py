@@ -13,7 +13,8 @@ class SearchPage(BasePage):
         el.clear()
         el.send_keys(word)
 
-    def get_input_keyword(self):
+    @property
+    def search_query_word(self):
         return self._search_text_box().get_attribute('value')
 
     def _search_text_box(self):

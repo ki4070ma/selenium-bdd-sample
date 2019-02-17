@@ -1,6 +1,6 @@
-Feature: testing google
+Feature: Google search page
 
-  Scenario: visit google and check
+  Scenario: Visit google and check
      When we visit google
      Then it should have a title "Google"
 
