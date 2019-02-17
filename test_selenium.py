@@ -4,7 +4,7 @@ import os
 import unittest
 from selenium import webdriver
 
-from pages.google.search import SearchPage
+from features.pages.google.search import SearchPage
 
 class GoogleSearchPageTest(unittest.TestCase):
 

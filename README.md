@@ -3,9 +3,16 @@
 
 # Developments
 * [How to run]
+  * Via pytest
 
 ```bash
 $ pytest
+```
+
+  * Via behave
+
+```bash
+$ behave
 ```
 
 * pip: selenium, pytest, behave

@@ -1,7 +1,9 @@
 import os
 from selenium import webdriver
 
-def before_feature(context, feature):
-    print("Before feature\n")
-    # context.browser = webdriver.Chrome()
+from features.pages.google.search import SearchPage
+
+def before_all(context):
+    print("Before all\n")
     context.browser = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'))
+    context.search_page = SearchPage(context.browser)

@@ -1,5 +1,5 @@
 
-from pages.common.basepage import BasePage
+from features.pages.common.basepage import BasePage
 
 class SearchPage(BasePage):
 
