@@ -10,11 +10,11 @@ def step(context):
     pass
    # assert context.browser.title == "Google"
 
-@when('we input "hogehoge" to text box at search page')
-def step(context):
-    context.search_page.input_keyword('hogehoge')
+@when('we input "{text}" to text box at search page')
+def step(context, text):
+    context.search_page.input_keyword(text)
 
-@then('it should have "hogehoge" at text box')
-def step(context):
-    assert context.search_page.get_input_keyword() == 'hogehoge'
+@then('it should have "{text}" at text box')
+def step(context, text):
+    assert context.search_page.get_input_keyword() == text
 
