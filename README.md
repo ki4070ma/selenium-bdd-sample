@@ -2,20 +2,21 @@
 * To learn selenium
 
 # Developments
-* [How to run]
-  * Via pytest
+## How to run
+* Via pytest
 
 ```bash
 $ pytest
 ```
 
-  * Via behave
+* Via behave
 
 ```bash
 $ behave
 ```
 
-* pip: selenium, pytest, behave
+## Dependencies
+* [pip]: selenium, pytest, behave
 
 # Checked items
 * Test Design Considerations@SeleniumHQ
