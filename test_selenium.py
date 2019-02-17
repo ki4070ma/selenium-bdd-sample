@@ -7,13 +7,14 @@ from selenium import webdriver
 
 from features.pages.google.search import SearchPage
 
+
 class GoogleSearchPageTest(unittest.TestCase):
 
     def setUp(self):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--incognito")
         self.driver = webdriver.Chrome(options=chrome_options,
-                                           executable_path=os.environ.get('CHROMEDRIVER_PATH'))
+                                       executable_path=os.environ.get('CHROMEDRIVER_PATH'))
 
     def tearDown(self):
         time.sleep(1)  # Just to check the view on browse by me

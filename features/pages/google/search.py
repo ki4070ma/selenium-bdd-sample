@@ -2,6 +2,7 @@
 from features.pages.common.basepage import BasePage
 from features.pages.locators import SearchPageLocators
 
+
 class SearchPage(BasePage):
 
     def __init__(self, driver):
