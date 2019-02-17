@@ -1,12 +1,14 @@
 # Readme
 * To learn selenium
 
-# About codes here
+# Developments
 * [How to run]
 
 ```bash
 $ pytest
 ```
+
+* pip: selenium, pytest, behave
 
 # Checked items
 * Test Design Considerations@SeleniumHQ
