@@ -18,7 +18,7 @@ class GoogleSearchPageTest(unittest.TestCase):
 
     def tearDown(self):
         time.sleep(1)  # Just to check the view on browse by me
-        self.driver.close()
+        self.driver.quit()
 
     def test_scenario1_search_keyword(self):
         search_page = SearchPage(self.driver)

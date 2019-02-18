@@ -30,9 +30,6 @@ $ pytest
 $ python -m autopep8 -r --global-config .config-pep8 -i .
 ```
 
-## Dependencies
-* [pip]: selenium, pytest, behave, autopep8
-
 # References
 * Test Design Considerations@SeleniumHQ
    * https://www.seleniumhq.org/docs/06_test_design_considerations.jsp 
@@ -42,3 +39,8 @@ $ python -m autopep8 -r --global-config .config-pep8 -i .
       * http://blog.amateur-factory.jp/?eid=1444184
 * Selenium by python
    * https://kurozumi.github.io/selenium-python/index.html
+* Selenium/Appium Advent Calendar 2018
+   * https://qiita.com/advent-calendar/2018/selenium_and_appium
+* Selenium IDE
+   * https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd/related
+ 
