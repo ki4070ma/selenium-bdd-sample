@@ -4,8 +4,8 @@ from selenium import webdriver
 from features.pages.google.search import SearchPage
 
 
-def before_all(context):
-    print("Before all")
+def before_scenario(context, scenario):
+    print("**Before scenario")
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--incognito")
     context.browser = webdriver.Chrome(chrome_options=chrome_options,
@@ -13,8 +13,8 @@ def before_all(context):
     context.search_page = SearchPage(context.browser)
 
 
-def after_all(context):
-    print("After all")
+def after_scenario(context, scenario):
+    print("**After scenario")
     import time
-    time.sleep(3)  # Just to check the view on browse by me
+    time.sleep(1)  # Just to check the view on browse by me
     context.browser.quit()
