@@ -30,9 +30,19 @@ $ pytest
 $ python -m autopep8 -r --global-config .config-pep8 -i .
 ```
 
+## behave behavior
+
+```bash
+$ behave --no-capture (Output print statement in terminal)
+$ behave --tags=TAG (Run only tagged case)
+```
+
 # References
-* Test Design Considerations@SeleniumHQ
-   * https://www.seleniumhq.org/docs/06_test_design_considerations.jsp 
+* Selenium official site
+   * Webdriver API
+      * https://selenium-python.readthedocs.io/api.html
+   * Test Design Considerations@SeleniumHQ
+      * https://www.seleniumhq.org/docs/06_test_design_considerations.jsp
 * Test Automation Patterns Wiki
    * https://testautomationpatterns.org/wiki/index.php/Main_Page
    * [Japanese translation] just checked overview
