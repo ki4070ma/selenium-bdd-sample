@@ -10,7 +10,7 @@ class SearchPage(BasePage):
 
     def __init__(self, driver):
         super(SearchPage, self).__init__(driver)
-        # self.driver.get('http://www.google.com')
+        # self.driver.get('http://www.google.com')  # Open google page based on current country
         self.driver.get('https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr')  # Google US
 
     def input_keyword(self, word):
