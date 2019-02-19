@@ -1,7 +1,6 @@
 import os
 from selenium import webdriver
 
-from features.pages.google.search import SearchPage
 from features.pages.common.utils import GlobalVar
 
 # Returns abs path relative to this file and not cwd
@@ -19,7 +18,7 @@ def before_all(context):
 
 
 def before_scenario(context, scenario):
-    GlobalVar().log_dir = os.path.join(GlobalVar().log_root_dir, scenario.name.replace(' ', ''))
+    GlobalVar().log_dir = os.path.join(GlobalVar().log_root_dir, scenario.name.replace(' ', '_'))
     os.path.isdir(GlobalVar().log_dir) or os.makedirs(GlobalVar().log_dir)
 
     print("**Before scenario")
@@ -27,7 +26,6 @@ def before_scenario(context, scenario):
     chrome_options.add_argument("--incognito")
     context.browser = webdriver.Chrome(chrome_options=chrome_options,
                                        executable_path=os.environ.get('CHROMEDRIVER_PATH'))
-    context.search_page = SearchPage(context.browser)
 
 
 def after_scenario(context, scenario):
