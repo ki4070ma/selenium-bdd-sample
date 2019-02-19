@@ -2,6 +2,7 @@
 from selenium.webdriver.common.keys import Keys
 
 from features.pages.common.basepage import BasePage
+from features.pages.common.utils import take_screenshot
 from features.pages.google.search_result import SearchResultPage
 from features.pages.locators import SearchPageLocators
 
@@ -12,6 +13,8 @@ class SearchPage(BasePage):
         super(SearchPage, self).__init__(driver)
         # self.driver.get('http://www.google.com')  # Open google page based on current country
         self.driver.get('https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr')  # Google US
+
+        take_screenshot(self.driver)
 
     def input_keyword(self, word):
         el = self._search_text_box()

@@ -9,32 +9,32 @@
 * Covered user stories
 
 # Developments
-## How to run tests
+## Setup
+
+* ```pip install -r developments.txt```
+* ```pre-commit install```
+
+## Run tests
 * Via behave(Main)
    * Will be executed under features folder
 
 ```bash
-$ behave
+$ python -m behave
+$ python -m behave --no-capture (Output print statement in terminal)
+$ python -m behave --tags=TAG (Run only tagged case)
 ```
 
 * Via pytest(Just for test)
    * Will be executed test_selenium.py
 
 ```bash
-$ pytest
+$ python -m pytest
 ```
 
 ## Run autopep8
 
 ```bash
 $ python -m autopep8 -r --global-config .config-pep8 -i .
-```
-
-## behave behavior
-
-```bash
-$ behave --no-capture (Output print statement in terminal)
-$ behave --tags=TAG (Run only tagged case)
 ```
 
 # References
