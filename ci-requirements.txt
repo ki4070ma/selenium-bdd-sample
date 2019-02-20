@@ -3,3 +3,4 @@ pylint==1.9.3
 autopep8==1.4.3
 pytest==4.0.2
 behave=1.2.6
+allure-behave=2.5.5

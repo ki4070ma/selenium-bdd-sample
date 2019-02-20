@@ -11,6 +11,7 @@
 # Developments
 ## Setup
 
+* ```brew instal allure```
 * ```pip install -r developments.txt```
 * ```pre-commit install```
 
@@ -22,6 +23,13 @@
 $ python -m behave
 $ python -m behave --no-capture (Output print statement in terminal)
 $ python -m behave --tags=TAG (Run only tagged case)
+```
+
+* Via behave with allure
+
+```bash
+$ behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder% ./features
+$ allure serve %allure_result_folder%
 ```
 
 * Via pytest(Just for test)
