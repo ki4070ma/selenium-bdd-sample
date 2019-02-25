@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ki4070ma/selenium-sample.svg?branch=master)](https://travis-ci.org/ki4070ma/selenium-sample)
+
 # Readme
 * To learn selenium
 
