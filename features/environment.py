@@ -2,6 +2,8 @@ import os
 from selenium import webdriver
 
 from features.pages.common.utils import GlobalVar
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
 
 # Returns abs path relative to this file and not cwd
 
@@ -24,8 +26,12 @@ def before_scenario(context, scenario):
     print("**Before scenario")
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--incognito")
-    context.browser = webdriver.Chrome(chrome_options=chrome_options,
-                                       executable_path=os.environ.get('CHROMEDRIVER_PATH'))
+    # context.browser = webdriver.Chrome(chrome_options=chrome_options,
+    #                                    executable_path=os.environ.get('CHROMEDRIVER_PATH'))
+    context.browser = webdriver.Remote(
+        command_executor='http://127.0.0.1:4444/wd/hub',
+        desired_capabilities=DesiredCapabilities.CHROME
+    )
 
 
 def after_scenario(context, scenario):
