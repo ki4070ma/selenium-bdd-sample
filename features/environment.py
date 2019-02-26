@@ -26,12 +26,14 @@ def before_scenario(context, scenario):
     print("**Before scenario")
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--incognito")
-    # context.browser = webdriver.Chrome(chrome_options=chrome_options,
-    #                                    executable_path=os.environ.get('CHROMEDRIVER_PATH'))
+
     context.browser = webdriver.Remote(
         command_executor='http://127.0.0.1:4444/wd/hub',
         desired_capabilities=DesiredCapabilities.CHROME
     )
+    # TODO Need to know difference between remote webdriver and local webdriver
+    # context.browser = webdriver.Chrome(chrome_options=chrome_options,
+    # executable_path=os.environ.get('CHROMEDRIVER_PATH'))
 
 
 def after_scenario(context, scenario):
