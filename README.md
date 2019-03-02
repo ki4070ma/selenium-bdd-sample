@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.org/ki4070ma/selenium-sample.svg?branch=master)](https://travis-ci.org/ki4070ma/selenium-sample)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/18287c763cc9e86b0919/maintainability)](https://codeclimate.com/github/ki4070ma/selenium-sample/maintainability)
+
+
+
 # Readme
 * To learn selenium
 
