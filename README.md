@@ -1,7 +1,5 @@
 [![Build Status](https://travis-ci.org/ki4070ma/selenium-sample.svg?branch=master)](https://travis-ci.org/ki4070ma/selenium-sample)
 
-[![Job Status](https://inspecode.rocro.com/badges/github.com/ki4070ma/selenium-sample/status?token=_tZxm64lNuOvF2warut_6-UssHYB3IrGP5Z6qSlxQvc)](https://inspecode.rocro.com/jobs/github.com/ki4070ma/selenium-sample/latest?completed=true) [![Report](https://inspecode.rocro.com/badges/github.com/ki4070ma/selenium-sample/report?token=_tZxm64lNuOvF2warut_6-UssHYB3IrGP5Z6qSlxQvc&branch=master)](https://inspecode.rocro.com/reports/github.com/ki4070ma/selenium-sample/branch/master/summary)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/18287c763cc9e86b0919/maintainability)](https://codeclimate.com/github/ki4070ma/selenium-sample/maintainability) 
 
 # Readme
